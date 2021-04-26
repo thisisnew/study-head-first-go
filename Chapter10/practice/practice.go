@@ -2,12 +2,20 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"study-head-first-go/Chapter10/geo"
 )
 
 func main() {
 	coordinates := geo.Coordinate{}
-	coordinates.SetLatitude(37.42)
-	coordinates.SetLongitude(-122.08)
-	fmt.Println(coordinates)
+	err := coordinates.SetLatitude(37.42)
+	if err != nil {
+		log.Fatal(err)
+	}
+	err = coordinates.SetLongitude(-1122.08)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(coordinates.Latitude())
+	fmt.Println(coordinates.Longitude())
 }
