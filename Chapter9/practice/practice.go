@@ -2,22 +2,21 @@ package main
 
 import "fmt"
 
-type Number int
+type Liters float64
+type Milliliters float64
+type Gallons float64
 
-func (n Number) Add(otherNumber int) {
-	fmt.Println(n, "plus", otherNumber, "is", int(n)+otherNumber)
+func (l Liters) ToMilliliters() Milliliters {
+	return Milliliters(l * 1000)
 }
 
-func (n Number) Subtract(otherNumber int) {
-	fmt.Println(n, "minus", otherNumber, "is", int(n)-otherNumber)
+func (m Milliliters) ToLiters() Liters {
+	return Liters(m / 1000)
 }
 
 func main() {
-	ten := Number(10)
-	ten.Add(4)
-	ten.Subtract(5)
-
-	four := Number(4)
-	four.Add(3)
-	four.Subtract(2)
+	l := Liters(3)
+	fmt.Printf("%0.1f liters is %0.1f milliliters\n", l, l.ToMilliliters())
+	ml := Milliliters(500)
+	fmt.Printf("%0.1f milliliters is %0.1f liters\n", ml, ml.ToLiters())
 }
