@@ -24,7 +24,7 @@ func (c *Coordinate) SetLatitude(latitude float64) error {
 }
 
 func (c *Coordinate) SetLongitude(longitude float64) error {
-	if longitude < -90 || longitude > 90 {
+	if longitude < -180 || longitude > 180 {
 		return errors.New("invalid longitude")
 	}
 	c.longitude = longitude
