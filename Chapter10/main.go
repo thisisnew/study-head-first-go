@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	date := calendar.Date{}
+	date := calendar.Event{}
 	err := date.SetYear(2019)
 	if err != nil {
 		log.Fatal(err)
