@@ -25,6 +25,8 @@ func GetFloats(fileName string) ([]float64, error) {
 		return nil, err
 	}
 
+	defer CloseFile(file)
+
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
 		number, err := strconv.ParseFloat(scanner.Text(), 64)
@@ -33,8 +35,6 @@ func GetFloats(fileName string) ([]float64, error) {
 		}
 		numbers = append(numbers, number)
 	}
-
-	CloseFile(file)
 
 	if scanner.Err() != nil {
 		return nil, scanner.Err()
