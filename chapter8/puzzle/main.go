@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"study-head-first-go/Chapter8/geo"
+	"study-head-first-go/chapter8/geo"
 )
 
 func main() {

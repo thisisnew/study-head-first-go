@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
-	"study-head-first-go/Chapter10/geo"
+	"study-head-first-go/chapter10/geo"
 )
 
 func main() {

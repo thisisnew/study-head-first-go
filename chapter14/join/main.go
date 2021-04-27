@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"study-head-first-go/Chapter14/prose"
+	"study-head-first-go/chapter14/prose"
 )
 
 func main() {

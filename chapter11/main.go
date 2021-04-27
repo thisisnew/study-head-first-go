@@ -1,6 +1,6 @@
 package main
 
-import "study-head-first-go/Chapter11/gadget"
+import "study-head-first-go/chapter11/gadget"
 
 type Player interface {
 	Play(s string)

@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
-	"study-head-first-go/Chapter6/datafile"
+	"study-head-first-go/chapter6/datafile"
 )
 
 func main() {
